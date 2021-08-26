@@ -1,0 +1,57 @@
+<div class='dashboard'>
+    <navbar-user></navbar-user>
+    <div class='dashboard-app'>
+        <div class='dashboard-content'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4" *ngFor="let pack of packageData">
+                        <div class="profile-card-4 text-center"><img src="{{pack.packageImage}}" width="300"
+                                height="200" class="img img-responsive">
+                            <div class="profile-content">
+                                <div class="profile-name">{{pack.packageName}}
+                                </div>
+                                <div class="profile-description">{{pack.itenary}}</div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="profile-overview">
+                                            <p>Hotel Name</p>
+                                            <h4>{{pack.hotelName}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="profile-overview">
+                                            <p>Hotel Cost Per Day</p>
+                                            <h4>{{pack.hotelCostPerDay}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="profile-overview">
+                                            <p>Cost Per Day</p>
+                                            <h4>{{pack.costPerDay}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="profile-overview">
+                                            <button type="button"
+                                                routerLink="/packbookcreate/{{cid}}/{{pack.packageID}}"
+                                                routerLinkActive="active"
+                                                class="btn btn-block create-account">Book</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<div class='dashboard'>
+    <navbar-user></navbar-user>
+    <div class='dashboard-app'>
+        <div class='dashboard-content'>
+            <div class='container'>
+                <div class="registration-form">
+                    <div class="row justify-content-center">
+                        <div class="form-icon-douche"></div>
+                        <div class="form-icon">
+                            <span><i class="fas fa-skiing"></i></span>
+                        </div>
+                        <div class="form-icon">
+                            <span><i class="fas fa-swimmer"></i></span>
+                        </div>
+                        <div class="form-icon">
+                            <span><i class="fas fa-hiking"></i></span>
+                        </div>
+                        <div class="form-icon-douche"></div>
+                    </div>
+                    <div class="row text-center">
+                        <h2 class="text-center"><b>Bill</b></h2>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col">
+                            <h6>Hotel Cost Per Day</h6>
+                        </div>
+                        <div class="col">
+                            <h6>{{pack.hotelCostPerDay | currency:'INR'}}</h6>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col">
+                            <h6>Cost Per Day</h6>
+                        </div>
+                        <div class="col">
+                            <h6>{{pack.costPerDay | currency:'INR'}}</h6>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col">
+                            <h6>Actual Cost of Booking</h6>
+                        </div>
+                        <div class="col">
+                            <h6>{{actualprice | currency:'INR'}}</h6>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col">
+                            <h6>Discounted Price</h6>
+                        </div>
+                        <div class="col">
+                            <h6>-&nbsp;{{discount | currency:'INR'}}</h6>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row text-center">
+                        <div class="col">
+                            <h6>Total Cost of Booking</h6>
+                        </div>
+                        <div class="col">
+                            <h6>{{totalprice | currency:'INR'}}</h6>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" (click)="confirmBook()" class="btn btn-block create-account">Confirm
+                            Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

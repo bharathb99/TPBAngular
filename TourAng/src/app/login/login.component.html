@@ -1,0 +1,43 @@
+<div class='dashboard'>
+    <navbar></navbar>
+    <div class='dashboard-app'>
+        <div class='dashboard-content'>
+            <div class="container" id="container">
+                <div class="form-container log-in-container">
+                    <form action="#">
+                        <h1><img src="assets/log-in.png" alt="lock" width="50" height="50">&nbsp;Login
+                        </h1>
+
+
+                        <input type="email" placeholder="Email" id="lblemail" name="email"
+                            [(ngModel)]="customerDetails.email" />
+                        <input type="password" (keyup.enter)="loginCustomer()" placeholder="Password" id="lblpassword"
+                            name="password" [(ngModel)]="customerDetails.password" />
+                        {{customerDetails.password}}
+                        <br>
+                        {{customer.password}}
+                        <a href="#">Forgot your password?</a>
+                        <button type="submit" (click)="loginCustomer()">Log In</button>
+                        {{message}}
+                        <a routerLink="/sign-up" routerLinkActive="active">New User? Register</a>
+
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-right">
+                            <img src="assets/images.jpg" width="300" height="200" />
+                            <br>
+                            <h3><img src="assets/—Pngtree—red coupon 10 off with_5366497.png" alt="offer" width="75"
+                                    height="75" />
+                                Limited Offer</h3>
+                            <h6>Book amazing packages on the best trips from <b>25th - 27th August 2021</b> to avail the
+                                offer!!
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

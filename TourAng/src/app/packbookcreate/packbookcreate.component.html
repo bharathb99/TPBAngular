@@ -1,0 +1,67 @@
+<div class='dashboard'>
+    <navbar-user></navbar-user>
+    <div class='dashboard-app'>
+        <div class='dashboard-content'>
+            <div class="container" id="container">
+                <div class="registration-form">
+                    <div class="form-icon">
+                        <span><i class="fas fa-book-open"></i></span>
+                    </div>
+                    <div class="row">
+                        <h2 class="text-center">Book a Package ! </h2>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lblnodays ">Number of Days </label>
+                                <input type="number" class="form-control item" id="lblnodays " name="noOfDays"
+                                    placeholder="Enter Number of Days" [(ngModel)]="booking.noOfDays" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lblnopeop ">Number of People </label>
+                                <input type="number" class="form-control item" id="lblnopeop " name="noOfPeope"
+                                    placeholder="Enter Number of People" [(ngModel)]="booking.noOfPeope" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lblsdate">Start Date </label> <br />
+                                <input class="form-control item" id="lblsdate"
+                                    [ngModel]="booking.startDate | date: 'dd/MM/yyyy'"
+                                    (ngModelChange)="booking.startDate=$event" name="startDate" type="date" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lbledate">End Date </label> <br />
+                                <input class="form-control item" id="lbledate"
+                                    [ngModel]="booking.endDate | date: 'dd/MM/yyyy'"
+                                    (ngModelChange)="booking.endDate=$event" name="endDate" type="date" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lblbdate">Booking Date</label>
+                                <input class="form-control item" id="lblbdate"
+                                    [ngModel]="booking.bookingDate | date: 'dd/MM/yyyy'"
+                                    (ngModelChange)="booking.bookingDate=$event" name="bookingDate" type="date" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <button type="button" (click)="packBook()" class="btn btn-block create-account">Book
+                                Package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,172 @@
+<div class='dashboard'>
+    <navbar-user></navbar-user>
+    <div class='dashboard-app'>
+        <div class='dashboard-content'>
+            <div class='container'>
+                <div class="registration-form">
+                    <div class="row">
+                        <div class="form-icon-douche"></div>
+                        <div class="form-icon">
+                            <span><i class="fas fa-skiing"></i></span>
+                        </div>
+                        <div class="form-icon">
+                            <span><i class="fas fa-swimmer"></i></span>
+                        </div>
+                        <div class="form-icon">
+                            <span><i class="fas fa-hiking"></i></span>
+                        </div>
+                        <div class="form-icon-douche"></div>
+                    </div>
+                    <div class="row">
+                        <h2 class="text-center"><b>Profile</b></h2>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-check-label" for="lblfname"> First Name</label>
+                        </div>
+                        <div class="col">
+                            <label class="form-check-label" for="lbllname"> Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control item" id="lblfname" name="fname"
+                                    placeholder="Enter First Name" [(ngModel)]="customerData.customerName.fname">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control item" id="lbllname " name="lname"
+                                    placeholder="Enter Last Name" [(ngModel)]="customerData.customerName.lname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Choose your gender:</p>
+                    </div>
+                    <div class="row ">
+                        <div class="col-4 text-center">
+                            <div class="form-check-inline">
+                                <label class="form-check-label " for="lblrdmale">Male</label>
+                                &nbsp;&nbsp;&nbsp;<input class="form-check-input item" type="radio" name="gender"
+                                    [(ngModel)]="customerData.gender" id="lblgender" value="Male" checked />
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="lblrdfemale">Female</label>
+                                &nbsp;&nbsp;&nbsp;<input class="form-check-input item" type="radio" name="gender"
+                                    [(ngModel)]="customerData.gender" id="lblgender" value="Female" />
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="lblrdother">Other</label>
+                                &nbsp;&nbsp;&nbsp;<input class="form-check-input item" type="radio" name="gender"
+                                    [(ngModel)]="customerData.gender" id="lblgender" value="Other" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-check-label" for="lblemail"> Email </label>
+                        </div>
+                        <div class="col">
+                            <label class="form-check-label" for="lblpass"> Password </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="email" class="form-control item" id="lblemail" name="email"
+                                    placeholder="Enter Email ID" [(ngModel)]="customerData.email">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="password" class="form-control item" id="lblpass" name="password"
+                                    placeholder="Enter Password" [(ngModel)]="customerData.password">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-check-label" for="lbldob"> Date Of Birth </label>
+                        </div>
+                        <div class="col">
+                            <label class="form-check-label" for="lblphone"> Phone </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <input class="form-control item" id="lbldob"
+                                    [ngModel]="customerData.dateOfBirth | date: 'dd/MM/yyyy'"
+                                    (ngModelChange)="customerData.dateOfBirth=$event" name="dateOfBirth" type="date" />
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control item" id="lblphone" name="phone"
+                                    placeholder="Enter your phone number" [(ngModel)]="customerData.phone" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-check-label" for="lbldoor">Door Number</label>
+                        </div>
+                        <div class="col">
+                            <label class="form-check-label" for="lblstreet">Street</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="number" class="form-control item" id="lbldoor" name="doorno"
+                                    placeholder="Enter your door number" [(ngModel)]="customerData.address.doorno">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control item" id="lblstreet" name="street"
+                                    placeholder="Enter your street" [(ngModel)]="customerData.address.street">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-check-label" for="lblcity">City</label>
+                        </div>
+                        <div class="col">
+                            <label class="form-check-label" for="lblpincode">Pincode</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="form-control item" id="lblcity" name="city"
+                                    placeholder="Enter your city" [(ngModel)]="customerData.address.city">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="number" class="form-control item" id="lblpincode" name="pincode"
+                                    placeholder="Enter your Pincode" [(ngModel)]="customerData.address.pincode">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" (click)="updateCustomer()" class="btn btn-block create-account">Update
+                            Profile</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
